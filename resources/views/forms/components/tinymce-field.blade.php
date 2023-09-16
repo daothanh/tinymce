@@ -4,13 +4,11 @@
 >
     <div
         x-data="{ state: $wire.$entangle('{{ $getStatePath() }}'), initialized: false }"
-        x-load-js="[@js(\Filament\Support\Facades\FilamentAsset::getScriptSrc($getLanguageId(), 'daothanh-tinymce'))]"
         x-init="(() => {
             $nextTick(() => {
                 tinymce.createEditor('tiny-editor-{{ $getId() }}', {
                     target: $refs.tinymce,
-                    language: '{{ $getInterfaceLanguage() }}',
-                    language_url: 'https://cdn.jsdelivr.net/npm/tinymce-i18n@23.7.24/langs5/{{ $getInterfaceLanguage() }}.min.js',
+                    language: '{{ $getLanguage() }}',
                     setup: function(editor) {
                         if(!window.tinySettingsCopy) {
                             window.tinySettingsCopy = [];

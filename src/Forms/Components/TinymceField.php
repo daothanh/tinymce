@@ -42,7 +42,7 @@ class TinymceField extends Field implements Contracts\CanBeLengthConstrained, Co
         $this->language = app()->getLocale();
     }
 
-    public function getInterfaceLanguage(): string
+    public function getLanguage(): string
     {
         return match ($this->language) {
             'ar' => 'ar',
@@ -98,69 +98,8 @@ class TinymceField extends Field implements Contracts\CanBeLengthConstrained, Co
             'ug' => 'ug',
             'uk' => 'uk',
             'vi' => 'vi',
-            'zh' => 'zh_CN',
+            'zh' => 'zh-Hans',
             default => 'en',
-        };
-    }
-
-    public function getLanguageId(): string
-    {
-        return match ($this->getInterfaceLanguage()) {
-            'ar' => 'tinymce-lang-ar',
-            'az' => 'tinymce-lang-az',
-            'bg' => 'tinymce-lang-bg_BG',
-            'bn' => 'tinymce-lang-bn_BD',
-            'ca' => 'tinymce-lang-ca',
-            'cs' => 'tinymce-lang-cs',
-            'cy' => 'tinymce-lang-cy',
-            'da' => 'tinymce-lang-da',
-            'de' => 'tinymce-lang-de',
-            'dv' => 'tinymce-lang-dv',
-            'el' => 'tinymce-lang-el',
-            'eo' => 'tinymce-lang-eo',
-            'es' => 'tinymce-lang-es',
-            'et' => 'tinymce-lang-et',
-            'eu' => 'tinymce-lang-eu',
-            'fa' => 'tinymce-lang-fa',
-            'fi' => 'tinymce-lang-fi',
-            'fr' => 'tinymce-lang-fr_FR',
-            'ga' => 'tinymce-lang-ga',
-            'gl' => 'tinymce-lang-gl',
-            'he' => 'tinymce-lang-he_IL',
-            'hr' => 'tinymce-lang-hr',
-            'hu' => 'tinymce-lang-hu_HU',
-            'hy' => 'tinymce-lang-hy',
-            'id' => 'tinymce-lang-id',
-            'is' => 'tinymce-lang-is_IS',
-            'it' => 'tinymce-lang-it',
-            'ja' => 'tinymce-lang-ja',
-            'kab' => 'tinymce-lang-kab',
-            'kk' => 'tinymce-lang-kk',
-            'ko' => 'tinymce-lang-ko_KR',
-            'ku' => 'tinymce-lang-ku',
-            'lt' => 'tinymce-lang-lt',
-            'lv' => 'tinymce-lang-lv',
-            'nb' => 'tinymce-lang-nb_NO',
-            'nl' => 'tinymce-lang-nl',
-            'oc' => 'tinymce-lang-oc',
-            'pl' => 'tinymce-lang-pl',
-            'pt' => 'tinymce-lang-pt_BR',
-            'ro' => 'tinymce-lang-ro',
-            'ru' => 'tinymce-lang-ru',
-            'sk' => 'tinymce-lang-sk',
-            'sl' => 'tinymce-lang-sl',
-            'sq' => 'tinymce-lang-sq',
-            'sr' => 'tinymce-lang-sr',
-            'sv' => 'tinymce-lang-sv_SE',
-            'ta' => 'tinymce-lang-ta',
-            'tg' => 'tinymce-lang-tg',
-            'th' => 'tinymce-lang-th_TH',
-            'tr' => 'tinymce-lang-tr',
-            'ug' => 'tinymce-lang-ug',
-            'uk' => 'tinymce-lang-uk',
-            'vi' => 'tinymce-lang-vi',
-            'zh' => 'tinymce-lang-zh_CN',
-            default => 'tinymce',
         };
     }
 
