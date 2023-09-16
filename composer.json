@@ -1,0 +1,32 @@
+{
+    "name": "daothanh/tinymce",
+    "description": "Filament Tinymce Plugin",
+    "require": {
+        "filament/filament": "^3.0-stable",
+        "unisharp/laravel-filemanager": "^2.6"
+    },
+    "license": "Private",
+    "autoload": {
+        "psr-4": {
+            "Daothanh\\Tinymce\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Daothanh\\Tinymce\\TinymceServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Thanh",
+            "email": "me@dxt.red"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
